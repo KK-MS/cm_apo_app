@@ -32,11 +32,13 @@ Building APO application
 * Run the command with the options
 
 [LL-NB-09-APO] 38) ./ApoClntDemo.win64.exe -apphost 10.5.11.93 StartStop
+
 Run 15 seconds of Hockenheim
 Run 15 seconds of LaneChange_ISO, saving results to file
 Simulation results file 'SimOutput/LL-NB-09/20191127/Examples_VehicleDynamics_Handling_LaneChange_ISO_112513.erg'
 [LL-NB-09-APO] 39)
 
-* Observations:
-** Carmaker Starts and executes Hockenheim and later Lanechange_iso
+### Observations:
+
+* Carmaker Starts and executes Hockenheim and later Lanechange_iso
 
