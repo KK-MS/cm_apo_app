@@ -1,0 +1,12 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-11-27 10:56:22
+TIME	0.000
+SIM_END			0s	0m
+IDLE	10:56:22
+SIM_START	cm_apo_test	2019-11-27 10:56:22
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	22.609
+SIM_END		cm_apo_test	22.606s	415.709m

@@ -2,7 +2,7 @@
 FileIdent = CarMaker-TestRun 8
 FileCreator = CarMaker 8.0.2 2019-8-30
 Description:
-Vehicle =
+Vehicle = Examples/DemoCar
 Trailer =
 Tire.0 =
 Tire.1 =
@@ -30,7 +30,10 @@ DrivMan.Init.LaneOffset = 0
 DrivMan.Init.OperatorActive = 1
 DrivMan.Init.OperatorState = drive
 DrivMan.VhclOperator.Kind = IPGOperator 1
-DrivMan.nDMan = 0
+DrivMan.nDMan = 1
+DrivMan.0.TimeLimit = 1000.0
+DrivMan.0.LongDyn = Driver 1 0
+DrivMan.0.LatDyn = Driver 0
 Traffic.IFF.FName =
 Traffic.IFF.Time.Name =
 Traffic.N = 0
@@ -94,6 +97,7 @@ Road.Definition:
 	FileIdent IPGRoad 4.5
 	Origin    0 0 0 0
 	Default 3.00 3.00 0.50 0.50 1.0 1.0 - 0 0 - 0 0
+	Straight  1000 - - - -  0 0 0
 Env.StartTime.Year = 2019
 Env.StartTime.Month = 1
 Env.StartTime.Day = 1
