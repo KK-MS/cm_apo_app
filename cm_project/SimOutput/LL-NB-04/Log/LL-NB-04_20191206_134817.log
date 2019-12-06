@@ -1,0 +1,8 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+ERROR		Directory 'Data/Vehicle' doesn't exist
+		
+ERROR		FATAL ERROR - Application stopped
+		Eliminate the error and restart the application
+SHUTDOWN	CarMaker quick shutdown initiated
+
