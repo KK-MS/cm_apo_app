@@ -44,3 +44,18 @@ SYSTEM_START	-	LL-NB-04	LL-NB-04	2019-12-10 10:57:25
 SYSTEM_INFO	CarMaker 8.0.2 - Car_Generic #252	fh@obelix.ipg 2019-08-30 13:18:55	(8.0.2 fh@obelix.ipg 2019-08-30 13:18:50)
 SIM	1575971846	LL-NB-04			0	0	0
 SIM	1575971847	LL-NB-04	ll_stsekeid	cm_apo_test	0	43.934	995.72
+
+
+SYSTEM_START	-	LL-NB-04	LL-NB-04	2019-12-10 13:37:16
+
+
+SYSTEM_INFO	CarMaker 8.0.2 - Car_Generic #252	fh@obelix.ipg 2019-08-30 13:18:55	(8.0.2 fh@obelix.ipg 2019-08-30 13:18:50)
+SIM	1575981437	LL-NB-04			0	0	0
+SIM	1575981463	LL-NB-04	ll_stsekeid	cm_apo_test	0	40.904	911.553
+SIM	1575981507	LL-NB-04	ll_stsekeid	cm_apo_test	0	43.934	995.72
+SIM	1575981564	LL-NB-04	ll_stsekeid	cm_apo_test	0	21.133	362.755
+SIM	1575981588	LL-NB-04	ll_stsekeid	cm_apo_test	0	10.336	92.1045
+SIM	1575981627	LL-NB-04	ll_stsekeid	cm_apo_test	0	43.934	995.72
+SIM	1575981736	LL-NB-04	ll_stsekeid	cm_apo_test	0	43.934	995.72
+SIM	1575981901	LL-NB-04	ll_stsekeid	cm_apo_test	0	5.745	24.301
+SIM	1575981931	LL-NB-04	ll_stsekeid	cm_apo_test	0	16.49	168.202
