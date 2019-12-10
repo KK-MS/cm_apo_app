@@ -1,0 +1,6 @@
+﻿  Creating app_tmp.c
+  Apo.cpp
+c:\users\ll_stsekeid\desktop\basti_projekt\basti_visual_studio_projekt\consoleapplication3\apo.cpp(144): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+c:\zeromq\4.2.5\cppzmq\zmq.hpp(699): warning C4715: "zmq::socket_t::send": Nicht alle Codepfade geben einen Wert zurück.
+  ConsoleApplication3.vcxproj -> C:\Users\ll_stsekeid\Desktop\Basti_Projekt\Basti_Visual_Studio_Projekt\ConsoleApplication3\./ConsoleApplication3.win64.exe
+          1 Datei(en) kopiert.
