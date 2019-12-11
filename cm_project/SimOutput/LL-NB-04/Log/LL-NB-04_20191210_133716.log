@@ -64,3 +64,10 @@ SIMULATE	cm_apo_test
 
 TIME	9.582
 SIM_END		cm_apo_test	9.579s	72.8278m
+TIME	142.395
+SIM_START	cm_apo_test	2019-12-10 14:13:15
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	70.922
+SIM_END		cm_apo_test	70.919s	658.657m

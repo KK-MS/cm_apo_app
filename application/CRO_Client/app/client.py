@@ -9,8 +9,8 @@ print('Server starts')
 
 oCROLayer0 = l0.cCROLayer0()
 
-sRoadName = 'A7'
-sRoadDirection = 'S'
+sRoadName = 'B308'
+sRoadDirection = 'W'
 sLayer = '0'
 sResolution = '1'
 
