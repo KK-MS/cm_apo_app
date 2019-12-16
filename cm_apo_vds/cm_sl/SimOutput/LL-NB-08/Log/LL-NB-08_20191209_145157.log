@@ -1,0 +1,27 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-09 14:51:58
+TIME	0.000
+SIM_END			0s	0m
+IDLE	14:51:59
+SIM_START	test_run_kp	2019-12-09 14:52:00
+TIME	0.237
+SIM_END		test_run_kp	0s	0m
+TIME	27.699
+SIM_START	test_run_kp	2019-12-09 14:56:35
+TIME	0.003
+WARNING		Vehicle start position on route corrected from 0.000 m to 4.900 m because of attached trailer
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	17.247
+SIM_END		test_run_kp	17.244s	224.477m
+TIME	21.048
+SIM_START	test_run_kp	2019-12-09 14:57:32
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	2.992
+SIM_END		test_run_kp	2.989s	1.13168m
+SHUTDOWN	CarMaker quick shutdown initiated
+

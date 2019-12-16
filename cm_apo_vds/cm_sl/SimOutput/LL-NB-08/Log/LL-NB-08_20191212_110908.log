@@ -1,0 +1,104 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-12 11:09:09
+TIME	0.000
+SIM_END			0s	0m
+IDLE	11:09:10
+SIM_START	test_run_kp	2019-12-12 11:09:11
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	6.012
+SIM_END		test_run_kp	6.009s	28.0724m
+TIME	11.036
+SIM_START	test_run_kp	2019-12-12 11:10:09
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	9.193
+SIM_END		test_run_kp	9.19s	78.537m
+TIME	11.510
+SIM_START	test_run_kp	2019-12-12 11:10:42
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	2.495
+SIM_END		test_run_kp	2.492s	0.967765m
+TIME	8.327
+SIM_START	test_run_kp	2019-12-12 11:11:46
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	3.907
+SIM_END		test_run_kp	3.904s	7.49882m
+TIME	15.975
+SIM_START	test_run_kp	2019-12-12 11:13:52
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	8.779
+SIM_END		test_run_kp	8.776s	70.2457m
+TIME	11.010
+SIM_START	test_run_kp	2019-12-12 11:14:24
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	3.206
+SIM_END		test_run_kp	3.203s	3.50775m
+TIME	0.001
+SIM_START	test_run_kp	2019-12-12 11:16:19
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.484
+SIM_END		test_run_kp	5.481s	21.7051m
+TIME	248.536
+SIM_START	test_run_kp	2019-12-12 11:57:16
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	13.458
+SIM_END		test_run_kp	13.455s	185.762m
+TIME	17.279
+SIM_START	test_run_kp	2019-12-12 11:59:23
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	10.916
+SIM_END		test_run_kp	10.913s	115.804m
+TIME	25.628
+SIM_START	test_run_kp	2019-12-12 12:02:12
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.851s	0.000244086m
+TIME	860.084
+SIM_START	test_run_kp	2019-12-12 14:25:29
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.355
+SIM_END		test_run_kp	5.352s	20.255m
+TIME	10.382
+SIM_START	test_run_kp	2019-12-12 14:26:31
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	7.638
+SIM_END		test_run_kp	7.635s	50.0546m
+TIME	255.076
+SIM_START	test_run_kp	2019-12-12 15:08:01
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	3.201
+SIM_END		test_run_kp	3.198s	3.48454m
+TIME	677.010
+SIM_START	test_run_kp	2019-12-12 17:00:26
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	32.017
+SIM_END		test_run_kp	32.014s	929.818m
+SHUTDOWN	CarMaker quick shutdown initiated
+

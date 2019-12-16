@@ -1,0 +1,198 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-12 08:22:23
+TIME	0.000
+SIM_END			0s	0m
+IDLE	08:22:23
+SIM_START	test_run_kp	2019-12-12 08:22:25
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	2.224
+SIM_END		test_run_kp	2.221s	0.0222432m
+TIME	7.693
+SIM_START	test_run_kp	2019-12-12 08:23:23
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	53.240
+SIM_START	test_run_kp	2019-12-12 08:27:33
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.917
+SIM_END		test_run_kp	5.914s	21.2543m
+TIME	17.451
+SIM_START	test_run_kp	2019-12-12 08:29:35
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.182
+SIM_END		test_run_kp	5.179s	13.762m
+TIME	30.746
+SIM_START	test_run_kp	2019-12-12 08:33:57
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	14.197
+SIM_END		test_run_kp	14.194s	178.199m
+TIME	41.941
+SIM_START	test_run_kp	2019-12-12 08:38:50
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	192.783
+SIM_START	test_run_kp	2019-12-12 09:06:16
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	13.779
+SIM_END		test_run_kp	13.776s	195.974m
+TIME	18.486
+SIM_START	test_run_kp	2019-12-12 09:07:31
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	8.208
+SIM_END		test_run_kp	8.205s	59.6504m
+TIME	0.001
+TIME	12.348
+SIM_START	test_run_kp	2019-12-12 09:08:29
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	11.335
+SIM_END		test_run_kp	11.332s	126.007m
+TIME	14.890
+SIM_START	test_run_kp	2019-12-12 09:09:27
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	8.855
+SIM_END		test_run_kp	8.852s	71.749m
+TIME	11.625
+SIM_START	test_run_kp	2019-12-12 09:10:13
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	19.077
+SIM_END		test_run_kp	19.071s	392.552m
+TIME	61.892
+SIM_START	test_run_kp	2019-12-12 09:17:59
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	7.629
+SIM_END		test_run_kp	7.626s	49.9111m
+TIME	10.356
+SIM_START	test_run_kp	2019-12-12 09:18:42
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	15.295
+SIM_END		test_run_kp	15.292s	245.977m
+TIME	102.192
+SIM_START	test_run_kp	2019-12-12 09:33:42
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	7.017
+SIM_END		test_run_kp	7.014s	40.785m
+TIME	34.275
+SIM_START	test_run_kp	2019-12-12 09:38:29
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	4.574
+SIM_END		test_run_kp	4.571s	12.6109m
+TIME	82.583
+SIM_START	test_run_kp	2019-12-12 09:51:39
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	16.018
+SIM_END		test_run_kp	16.015s	271.397m
+TIME	37.683
+SIM_START	test_run_kp	2019-12-12 09:55:33
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.562
+SIM_END		test_run_kp	5.559s	22.5877m
+TIME	7.844
+SIM_START	test_run_kp	2019-12-12 09:56:05
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.722s	0.00444255m
+TIME	8.162
+SIM_START	test_run_kp	2019-12-12 09:57:21
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.332s	0.000872853m
+TIME	11.739
+SIM_START	test_run_kp	2019-12-12 09:59:13
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.871s	0.000263783m
+TIME	352.926
+SIM_START	test_run_kp	2019-12-12 10:57:57
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	18.212
+SIM_END		test_run_kp	18.209s	356.961m
+SIM_START	test_run_kp	2019-12-12 10:58:25
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	13.475
+SIM_END		test_run_kp	13.472s	186.295m
+TIME	16.369
+SIM_START	test_run_kp	2019-12-12 10:59:09
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	7.532
+SIM_END		test_run_kp	7.529s	48.381m
+TIME	11.081
+SIM_START	test_run_kp	2019-12-12 10:59:53
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.371s	3.19187e-006m
+TIME	2.863
+SIM_START	test_run_kp	2019-12-12 11:00:20
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	6.828
+SIM_END		test_run_kp	6.825s	38.2441m
+TIME	9.331
+SIM_START	test_run_kp	2019-12-12 11:00:53
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	8.833
+SIM_END		test_run_kp	8.83s	71.2981m
+TIME	10.936
+SIM_START	test_run_kp	2019-12-12 11:01:24
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.937s	0.0791229m
+TIME	10.029
+SIM_START	test_run_kp	2019-12-12 11:02:49
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	4.281
+SHUTDOWN	CarMaker quick shutdown initiated
+
+SIM_END		test_run_kp	4.281s	10.2225m

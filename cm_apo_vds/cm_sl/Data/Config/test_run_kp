@@ -1,0 +1,23 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = CarMaker-ADTF 1.0
+Description:
+ADTF.active = 0
+ADTF.cpuID = -1
+ADTF.hostname = localhost
+ADTF.DDL_filename =
+ADTF.Port = 2210
+
+ADTF.Sync.Mode = 0
+ADTF.Sync.StreamName =
+ADTF.Sync.StreamNameOut =
+ADTF.Sync.ExpUpdCycleCount = 0
+ADTF.Sync.SigNameIn =
+ADTF.Sync.SigNameOut =
+ADTF.Sync.MaxPermDev = 0
+ADTF.Sync.Step = 1
+ADTF.Sync.TimeOut = 0.5
+
+ADTF.Stream.In:
+ADTF.Stream.Out:
+
+# Stream Mappings:
