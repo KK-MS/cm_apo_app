@@ -1,0 +1,73 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-10 13:37:17
+TIME	0.000
+SIM_END			0s	0m
+IDLE	13:37:18
+TIME	2.528
+SIM_START	cm_apo_test	2019-12-10 13:37:43
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	40.907
+SIM_END		cm_apo_test	40.904s	911.553m
+SIM_START	cm_apo_test	2019-12-10 13:38:27
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	43.937
+SIM_END		cm_apo_test	43.934s	995.72m
+SIM_START	cm_apo_test	2019-12-10 13:39:24
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	21.136
+SIM_END		cm_apo_test	21.133s	362.755m
+SIM_START	cm_apo_test	2019-12-10 13:39:48
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	10.339
+SIM_END		cm_apo_test	10.336s	92.1045m
+TIME	13.130
+SIM_START	cm_apo_test	2019-12-10 13:40:27
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	43.937
+SIM_END		cm_apo_test	43.934s	995.72m
+TIME	50.187
+SIM_START	cm_apo_test	2019-12-10 13:42:16
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	43.937
+SIM_END		cm_apo_test	43.934s	995.72m
+TIME	55.957
+SIM_START	cm_apo_test	2019-12-10 13:45:01
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	5.748
+SIM_END		cm_apo_test	5.745s	24.301m
+TIME	8.056
+SIM_START	cm_apo_test	2019-12-10 13:45:31
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	16.493
+SIM_END		cm_apo_test	16.49s	168.202m
+TIME	46.156
+SIM_START	cm_apo_test	2019-12-10 13:50:51
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	9.582
+SIM_END		cm_apo_test	9.579s	72.8278m
+TIME	142.395
+SIM_START	cm_apo_test	2019-12-10 14:13:15
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	70.922
+SIM_END		cm_apo_test	70.919s	658.657m

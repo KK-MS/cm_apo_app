@@ -1,0 +1,68 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = IPGRoad 8.0
+FileCreator = CarMaker 8.0.2
+LibVersion = 8.0.2
+Country = DEU
+nLinks = 1
+nJunctions = 0
+nObjects = 50
+nRoutes = 2
+RoadNetworkLength = 1000
+BBox = -10 1010 -13.5 13.5 -11 11
+Route.0.Length = 1000
+Route.1.Length = 1000
+RST.Unit = kmh
+RST = 50 100 130 30 70 30 0 -1
+Movie = 0.2 1 0.02 1.5 1.5 1 1
+PathMode = -1
+Link.0.ID = 0
+Link.0.Junctions = -1 -1 -2 -1
+Link.0.Node0 = 0 0 0 0
+Link.0.RST = undefined
+Link.0.RL.ID = 1
+Link.0.Seg.0.ID = 10
+Link.0.Seg.0.Type = Straight
+Link.0.Seg.0.Param = 1000 0 0 0 0 0 0 0
+Link.0.LaneSection.0.ID = 5
+Link.0.LaneSection.0.Start = 0
+Link.0.LaneSection.0.LaneL.0.ID = 6
+Link.0.LaneSection.0.LaneL.0 = 0 3 3 0 0 0 0
+Link.0.LaneSection.0.LaneL.0.ARP = 19 20 21 22 23 24
+Link.0.LaneSection.0.LaneL.0.Width:
+	11 -1 0 0 0 3 0 -999 -999
+Link.0.LaneSection.0.LaneL.1.ID = 8
+Link.0.LaneSection.0.LaneL.1 = 2 0.5 0.5 5 0 0 0
+Link.0.LaneSection.0.LaneR.0.ID = 7
+Link.0.LaneSection.0.LaneR.0 = 0 3 3 0 0 0 0
+Link.0.LaneSection.0.LaneR.0.ARP = 25 26 27 28 29 30
+Link.0.LaneSection.0.LaneR.0.Width:
+	15 -1 0 0 0 3 0 -999 -999
+Link.0.LaneSection.0.LaneR.1.ID = 9
+Link.0.LaneSection.0.LaneR.1 = 2 0.5 0.5 5 0 0 0
+LanePath.0 = 36 6 2 10 0.1 0.1
+LanePath.1 = 37 7 2 10 0.1 0.1
+UserPath.0 = 39 0 1 -2 -2 1
+UserPath.0.Nodes:
+	40 0 0 2 0 0
+	41 0 0 3 0 0
+UserPath.1 = 45 0 1 -2 -2 -1
+UserPath.1.Nodes:
+	47 0 0 2 0 0
+	46 0 0 3 0 0
+Route.0.ID = 34
+Route.0.Name = Route
+Route.0.DrvPath.ID = 38
+Route.0.DrvPath:
+	39
+Route.1.ID = 35
+Route.1.Name = ReverseRoute
+Route.1.DrvPath.ID = 44
+Route.1.DrvPath:
+	45
+RL.1.RoadMarking.0.ID = 31 1
+RL.1.RoadMarking.0 = 0 0 0 1 0 0 0.12 0 2 0 0 3 6 1 1 4 ""
+RL.1.RoadMarking.1.ID = 32 1
+RL.1.RoadMarking.1 = 0 0 0 1 0.1 -1 0.12 0 1 0 0 0 0 1 1 4 ""
+RL.1.RoadMarking.2.ID = 33 1
+RL.1.RoadMarking.2 = 0 0 0 1 -0.1 1 0.12 0 1 0 0 0 0 1 1 4 ""
+MaxUsedObjId = 47

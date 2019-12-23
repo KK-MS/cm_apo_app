@@ -1,0 +1,179 @@
+#INFOFILE1.1 - Do not remove this line!
+
+File.Format = erg
+File.ByteOrder = LittleEndian
+File.DateInSeconds = 1575366098
+
+File.At.1.Name = Car.Distance
+File.At.1.Type = Double
+Quantity.Car.Distance.Unit = m
+
+File.At.2.Name = Car.Road.GCS.Lat
+File.At.2.Type = Double
+Quantity.Car.Road.GCS.Lat.Unit = rad
+
+File.At.3.Name = Car.Road.GCS.Long
+File.At.3.Type = Double
+Quantity.Car.Road.GCS.Long.Unit = rad
+
+File.At.4.Name = Time
+File.At.4.Type = Double
+Quantity.Time.Unit = s
+
+File.At.5.Name = Car.Road.GCS.Elev
+File.At.5.Type = Float
+Quantity.Car.Road.GCS.Elev.Unit = m
+
+File.At.6.Name = Car.Road.Lane.Act.Width
+File.At.6.Type = Float
+Quantity.Car.Road.Lane.Act.Width.Unit = m
+
+File.At.7.Name = Car.Road.Path.DevDist
+File.At.7.Type = Float
+Quantity.Car.Road.Path.DevDist.Unit = m
+
+File.At.8.Name = Sensor.TSign.TS00.0.ds
+File.At.8.Type = Float
+Quantity.Sensor.TSign.TS00.0.ds.Unit = m
+
+File.At.9.Name = Sensor.TSign.TS00.0.ds.x
+File.At.9.Type = Float
+Quantity.Sensor.TSign.TS00.0.ds.x.Unit = m
+
+File.At.10.Name = Sensor.TSign.TS00.0.ds.y
+File.At.10.Type = Float
+Quantity.Sensor.TSign.TS00.0.ds.y.Unit = m
+
+File.At.11.Name = Sensor.TSign.TS00.0.ds.z
+File.At.11.Type = Float
+Quantity.Sensor.TSign.TS00.0.ds.z.Unit = m
+
+File.At.12.Name = Sensor.TSign.TS00.TimeStamp
+File.At.12.Type = Float
+Quantity.Sensor.TSign.TS00.TimeStamp.Unit = s
+
+File.At.13.Name = Sensor.TSign.TS00.0.Main.val0
+File.At.13.Type = Float
+
+File.At.14.Name = Sensor.TSign.TS00.0.Main.val1
+File.At.14.Type = Float
+
+File.At.15.Name = Sensor.TSign.TS00.0.ObjId
+File.At.15.Type = Int
+
+File.At.16.Name = Sensor.TSign.TS00.nSign
+File.At.16.Type = Int
+
+Anim.Msg.0.Time = 0
+Anim.Msg.0.Class = Anim
+Anim.Msg.0.Id = 50
+Anim.Msg.0.Data:
+	jnilTOCeij7BhwiyvprdHWPz3Y6OeKVYAAAAAwAAAAMAAAAAADIA
+
+Anim.Msg.1.Time = 0
+Anim.Msg.1.Class = Anim
+Anim.Msg.1.Id = 51
+Anim.Msg.1.Data:
+	dQYRzaqvrqzj9/D0O0bqo5dHdBV1BhHZAAAAAwAAAAMAAAAAADMA
+
+Anim.Msg.2.Time = 0
+Anim.Msg.2.Class = Anim
+Anim.Msg.2.Id = 21
+Anim.Msg.2.Data:
+	9JmDbrF3xJalHuP9PR0TAqyRyhv0mYPyAAAAaAAAAGgAAAAAABUAAAAAAAA/xryW
+	D+NMBj/qkNI0e4FNviAAAAAAAAc/xs1GYlc10D/qkCBPWHLgQIhMbNDlWCkAAAAA
+	AAAAAD/Gpw2bjAZmP+qQMAh6u29AiJNr+0LhQwAAAAAAAAAAAAAAAAAAAAAK
+
+Anim.VehicleClass = Car
+Anim.Vehicle.MovieSkin = 3D/Vehicles/VW_T6_2016.mobj
+
+Anim.Msg.3.Time = 0
+Anim.Msg.3.Class = Anim
+Anim.Msg.3.Id = 11
+Anim.Msg.3.Data:
+	2yfxQuA1kWCeRSVaB/Doq/BXEtXbJ/ByAAAA2AAAANgAAAAAAAsEAAACAAAAAAAA
+	P1BiTj6gxJxAnO2Rv0+dsj/5mZoAAAAAAAAAAAAAAABAOAAAAAAAAD9R64VEzYAA
+	RShczb3MzM0AAAAAPszMzUB/jVA/T52yPqDEnEB/jVC/T52yPqDEnD9+NT8/UGJO
+	PqDEnD9+NT+/UGJOPqDEnAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	vczMzQAAAAA+zMzN
+
+Anim.Msg.4.Time = 0
+Anim.Msg.4.Class = Anim
+Anim.Msg.4.Id = 15
+Anim.Msg.4.Data:
+	W7thRMMDYIaKc78wQtAyLnfhF9Rbu2GMAAAAiAAAAIgAAAAAAA8EAAAAAAAAAQAA
+	PrCj1z5c7ZEAAAAAPnCj14AAAAAAAAAARdrAAAH/AAA+sKPXPlztkYAAAAA+cKPX
+	AAAAAAAAAABF2sAAAgEAAD6wo9c+XO2RAAAAAD5wo9eAAAAAAAAAAEXawAAD/wAA
+	PrCj1z5c7ZGAAAAAPnCj1wAAAAAAAAAARdrAAAoK
+
+Anim.Msg.5.Time = 0
+Anim.Msg.5.Class = Anim
+Anim.Msg.5.Id = 23
+Anim.Msg.5.Data:
+	QUrO0wsvG/ECyGJiHzI1Qv/ClspBSs4LAAAAlAAAAJQAAAAAABcAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoK
+
+Anim.Msg.6.Time = 0
+Anim.Msg.6.Class = Instr
+Anim.Msg.6.Id = 0
+Anim.Msg.6.Data:
+	wt0+Ck4CRzjMipibelXQ/Kv1kSjC3T4mAAAAFAAAABQAAAAAAAAAAAAGAAFFbOwx
+	Q0kipAAAAAEK
+
+Anim.Msg.7.Time = 0
+Anim.Msg.7.Class = Anim
+Anim.Msg.7.Id = 22
+Anim.Msg.7.Data:
+	p22siMTM14L0Kp/2NR5IGbiQa9mnbaykAAAAFAAAABQAAAAAABYAAAAGAAFFbOwx
+	Q0kipAAAAAEK
+
+Anim.Msg.8.Time = 0
+Anim.Msg.8.Class = Anim
+Anim.Msg.8.Id = 17
+Anim.Msg.8.Data:
+	Kf8b2NTQlMm7HEIb+MfBkgut4vwp/xvAAAAABAAAAAQAAAAAABEAAAoK
+
+Anim.Msg.9.Time = 0
+Anim.Msg.9.Class = Anim
+Anim.Msg.9.Id = 27
+Anim.Msg.9.Data:
+	DZCKZRdWNc5A8weL5MvgfAoxSmkNkIo9AAAANQAAADUAAAAAABsAAQBuAARCyAAA
+	P/W+Cz1kw4hAhmZmAAAAAD7MzM0AAAAAAAAAAAAAAAAEAAAARlMwMAAK
+
+Anim.Msg.10.Time = 0
+Anim.Msg.10.Class = Anim
+Anim.Msg.10.Id = 20
+Anim.Msg.10.Data:
+	kCH5cclv3ZFWmHbUbX10tpzhjDWQIflZAAAAEQAAABEAAAAAABQAAQEAAAAAAAAA
+	UkQwMAAK
+
+Anim.Msg.11.Time = 0
+Anim.Msg.11.Class = Anim
+Anim.Msg.11.Id = 28
+Anim.Msg.11.Data:
+	dLJng9+FyLtEHIA77yYrEY3H9Ip0smfXAAAAMQAAADEAAAAAABwAAULIAAA/srjC
+	P0kP2kBmZmYAAAAAP9mZmgAAAAA+MrjCAAAAAAAAAABUUzAwAAoK
+
+Testrun = B308_W
+
+SimParam.DeltaT = 0.001
+
+NamedValues.Count = 0
+
+KeyValues.Count = 0
+
+Comment:
+	For more details see session logfile
+
+CarMaker.NumVersion = 80002
+CarMaker.Version = 8.0.2
+CarMaker.Version.MatSupp = 8.0.2
+CarMaker.Version.Apo = 1.34
+CarMaker.Version.Info = 1.21.2
+CarMaker.Version.Driver = 8.0
+CarMaker.Version.Road = 8.0.2
+CarMaker.Version.Tire = 7.1
+

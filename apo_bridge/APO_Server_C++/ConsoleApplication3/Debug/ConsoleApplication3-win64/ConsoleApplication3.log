@@ -1,0 +1,4 @@
+﻿  Creating app_tmp.c
+  Apo.cpp
+c:\users\ll_stjsweih\source\repos\consoleapplication3\consoleapplication3\apo.cpp(90): error C2220: warning treated as error - no 'object' file generated
+c:\users\ll_stjsweih\source\repos\consoleapplication3\consoleapplication3\apo.cpp(90): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
