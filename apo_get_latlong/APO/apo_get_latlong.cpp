@@ -14,19 +14,16 @@ int main()
 {
   const int channel = 1;
   tApoSid sid = NULL;//NULL;
-  tApoSubscription subs[2];// Hier steht die Anzahl der aktuellen Abonnements!
+  tApoSubscription subs[4];// Hier steht die Anzahl der aktuellen Abonnements!
 
 
   printf(" APOCInit\n");
   ApocInit();
 
-  //string latstring = "";
-  //string lonstring = "";
-  //string all = "";
-  double lat = 0.0;
-  double lon = 0.0;
-  //int lat = 0.0;
-  //int lon = 0.0;
+  int    time;
+  float vel;
+  double lat;
+  double lon;
 
   //-------------------SERVER VERBINDUNGSAUFBAU-----------------------//
 
@@ -78,13 +75,15 @@ int main()
 
   //-----------------------ABONNIEREN DER VARIABLEN----------------------//
 
-  subs[0].Name = "Car.Road.GCS.Lat";
-  subs[1].Name = "Car.Road.GCS.Long";
+  subs[0].Name = "Time";
+  subs[1].Name = "Car.Road.GCS.Lat";
+  subs[2].Name = "Car.Road.GCS.Long";
+  subs[3].Name = "Car.vx";
 
   printf(" ApocSubscribe\n");
-  ApocSubscribe(sid, 2, subs, 100, 1, 20, 0);
 
-  //cout << "Connecting to hello world server" << endl;
+  //ApocSubscribe(sid, 2, subs, 100, 1, 20, 0);
+  ApocSubscribe(sid, 4, subs, 100, 1, 50, 0);
 
   while (true)
   {
@@ -98,16 +97,17 @@ int main()
     if (ApocGetData(sid) > 0)
     {
 
-      lat = ((*(double*)subs[0].Ptr * 180/M_PI) );
+      time = (*(double*)subs[0].Ptr);
 
-      //cout.precision(10);
+      //lat  = (*(double*)subs[1].Ptr * 180/M_PI);
+      lat  = (*(double*)subs[1].Ptr);
+          
+      //lon  = (*(double*)subs[2].Ptr * 180/M_PI); 
+      lon  = (*(double*)subs[2].Ptr); 
 
-      //cout << lat << endl;
+      vel  = (*(float*)subs[3].Ptr * 3600) / 1000;
 
-      lon = ((*(double*)subs[1].Ptr * 180/M_PI)); 
-
-      //cout << "Sending" << endl;
-      printf(" %d, %d\n", lat, lon);
+      printf("APO OUTPUT: %d s\t%f\t%f\t%f km/h\n", time, lat, lon, vel);
     }
   }
 
