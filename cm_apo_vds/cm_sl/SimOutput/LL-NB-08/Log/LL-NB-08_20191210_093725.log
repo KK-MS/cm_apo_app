@@ -1,0 +1,199 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-10 09:37:26
+TIME	0.000
+SIM_END			0s	0m
+IDLE	09:37:26
+SIM_START	test_run_kp	2019-12-10 09:37:28
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	2.660
+SIM_END		test_run_kp	2.657s	0.427471m
+TIME	14.033
+SIM_START	test_run_kp	2019-12-10 09:39:26
+TIME	0.002
+WARNING		Cannot start simulation, must be in state 'Idle' (currently 'StartWait')
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	3.569
+SIM_END		test_run_kp	3.566s	3.15297m
+TIME	9.503
+SIM_START	test_run_kp	2019-12-10 09:40:36
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	6.858
+SIM_END		test_run_kp	6.855s	32.8065m
+TIME	20.994
+SIM_START	test_run_kp	2019-12-10 09:43:16
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	12.495
+SIM_END		test_run_kp	12.492s	134.679m
+TIME	403.531
+SIM_START	test_run_kp	2019-12-10 11:12:47
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.662s	1.07652e-005m
+TIME	11.193
+SIM_START	test_run_kp	2019-12-10 11:14:36
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	44.351
+SIM_START	test_run_kp	2019-12-10 11:16:45
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.341s	2.08908e-006m
+TIME	17.215
+SIM_START	test_run_kp	2019-12-10 11:19:36
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.351s	2.18465e-006m
+TIME	8.379
+SIM_START	test_run_kp	2019-12-10 11:20:58
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.371s	2.38207e-006m
+TIME	14.456
+SIM_START	test_run_kp	2019-12-10 11:23:21
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.561s	5.00178e-006m
+TIME	43.752
+SIM_START	test_run_kp	2019-12-10 11:30:35
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	4.403
+SIM_END		test_run_kp	4.4s	7.71902m
+TIME	93.928
+SIM_START	test_run_kp	2019-12-10 11:45:35
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.851s	3.53869e-005m
+TIME	26.197
+SIM_START	test_run_kp	2019-12-10 11:49:52
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	2.922
+SIM_END		test_run_kp	2.919s	0.954969m
+TIME	9.693
+SIM_START	test_run_kp	2019-12-10 11:51:03
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	3.318
+SIM_END		test_run_kp	3.315s	2.15197m
+TIME	841.296
+SIM_START	test_run_kp	2019-12-10 14:10:47
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.030
+SIM_END		test_run_kp	5.027s	12.4276m
+TIME	21.309
+SIM_START	test_run_kp	2019-12-10 14:13:36
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	12.318
+SIM_END		test_run_kp	12.315s	130.535m
+TIME	0.001
+SIM_START	test_run_kp	2019-12-10 14:14:19
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	0.001
+TIME	41.421
+SIM_START	test_run_kp	2019-12-10 14:15:58
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.202s	8.08869e-005m
+TIME	8.248
+SIM_START	test_run_kp	2019-12-10 14:17:14
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.072s	6.67435e-005m
+TIME	7.199
+SIM_START	test_run_kp	2019-12-10 14:18:21
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.971s	5.38852e-005m
+TIME	11.552
+SIM_START	test_run_kp	2019-12-10 14:20:12
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	4.374
+SIM_END		test_run_kp	4.371s	7.53681m
+TIME	72.749
+SIM_START	test_run_kp	2019-12-10 14:31:58
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.661s	1.07652e-005m
+TIME	7.750
+SIM_START	test_run_kp	2019-12-10 14:33:12
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	0.582s	5.81624e-006m
+TIME	102.059
+SIM_START	test_run_kp	2019-12-10 14:50:10
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	40.685
+SIM_START	test_run_kp	2019-12-10 14:51:41
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	21.493
+SIM_END		test_run_kp	21.49s	429.086m
+TIME	49.492
+SIM_START	test_run_kp	2019-12-10 14:56:48
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	13.571
+SIM_END		test_run_kp	13.568s	161.333m
+TIME	20.506
+SIM_START	test_run_kp	2019-12-10 14:58:38
+TIME	0.000
+SIMULATE	test_run_kp
+
+SIM_END		test_run_kp	1.862s	0.000269725m
+TIME	4.805
+SIM_START	test_run_kp	2019-12-10 14:59:17
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	35.171
+SIM_END		test_run_kp	35.168s	995.588m
+TIME	77.329
+SIM_START	test_run_kp	2019-12-10 15:07:24
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	20.608
+SIM_END		test_run_kp	20.605s	394.297m

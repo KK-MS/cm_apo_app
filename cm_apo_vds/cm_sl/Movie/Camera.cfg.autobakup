@@ -1,0 +1,8 @@
+#INFOFILE1.1 - Do not remove this line!
+FileIdent = IPGMovie-Camera 7
+FileCreator = IPGMovie 8.0.2 2019-8-30
+
+Calc.1 = rotxyz {} {} {}
+Calc.2 = rotxyz {} {} {}
+Calc.3 = rotxyz {} {} {}
+Calc.4 = rotxyz {} {} {}

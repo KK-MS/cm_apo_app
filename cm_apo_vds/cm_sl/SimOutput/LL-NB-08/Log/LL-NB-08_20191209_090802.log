@@ -1,0 +1,28 @@
+APPLICATION	CarMaker 8.0.2 - Car_Generic #252 (win64-8.0.2)
+COMPILED	fh@obelix.ipg 2019-08-30 13:18:55
+FIRST_INIT	(internal default used)	2019-12-09 09:08:03
+TIME	0.000
+SIM_END			0s	0m
+IDLE	09:08:03
+SIM_START	test_run_kp	2019-12-09 09:08:10
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.316
+SIM_END		test_run_kp	5.312s	14.9911m
+TIME	0.001
+SIM_START	test_run_kp	2019-12-09 09:09:13
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	5.653
+SIM_END		test_run_kp	5.649s	18.357m
+TIME	251.948
+SIM_START	test_run_kp	2019-12-09 09:50:22
+TIME	0.000
+SIMULATE	test_run_kp
+
+TIME	33.979
+SIM_END		test_run_kp	33.976s	945.918m
+SHUTDOWN	CarMaker quick shutdown initiated
+
