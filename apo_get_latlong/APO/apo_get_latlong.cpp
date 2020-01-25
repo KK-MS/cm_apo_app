@@ -9,7 +9,7 @@
 
 #include<winsock2.h>
 //#pragma comment(lib,"ws2_32.lib") //Winsock Library
-//
+
 #include <sys/types.h>
 #include <unistd.h>
 #include <ctype.h>
@@ -17,15 +17,13 @@
 
 #include <errno.h>
 
-//#include "netrx.h"
+#include "netrx.h"
 #include "packet.h"
-#include "client_vds_h.h"
 
 #define M_PI 3.14159265358979323846
+#define CAR_WIDTH_CR 0.811
 
-
-//---------------------CM_VDS----------------------------------------//
-
+//------------------------ CM_VDS ------------------------------//
 
 typedef enum {
     SaveFormat_DataNotSaved = 0,
@@ -68,12 +66,6 @@ static void VDS_PrintSimInfo();
 void VDSIF_AddDataToStats(unsigned int len);
 void VDSIF_UpdateStats(unsigned int ImgLen, const char *ImgType, int Channel, int ImgWidth, int ImgHeight, float SimTime);
 void VDSIF_UpdateEndSimTime();
-
-// misc helpers
-//void WriteImgDataToFile(const char* img, unsigned int ImgLen, const char *Img Type, int Channel, int ImgWidth, int ImgHeight, float SimTime);
-//void WriteEmbeddedDataToCSVFile(const char* data, unsigned int dataLen, int Channel, float SimTime, const char* AniMode);
-//void PrintEmbeddedData (const char* data, unsigned int dataLen);
-
 
 /*
  ** VDS_RecvHdr
@@ -396,7 +388,6 @@ static inline double GetTime()  // in seconds
   gettimeofday(&tv, NULL);
   return tv.tv_sec + tv.tv_usec * 1e-6;
 }
-
 void VDSIF_AddDataToStats(unsigned int len)
 {
   VDSIF.nImagesTotal++;
@@ -452,36 +443,20 @@ void termination_handler(int signum)
 }
 
 
-//---------------------DOUBLE-2-STRING-------------------------------//
+/*********************** MAIN FUNCTION ******************************/
 
 
 int main(int argc, char *argv[]) 
 {
-  
-  //-------------------Init & NXP_SERVER CONNECT --------------------//
+ 
+ //------------------- Init & NXP_SERVER CONNECT ------------------//
 
-  const int channel = 1;
-  tApoSid sid = NULL;//NULL;
-  tApoSubscription subs[6];// Hier steht die Anzahl der aktuellen Abonnements!
-
- printf(" APOCInit\n");
- ApocInit();
-
- //unsigned int  time;
- double    time;
-
- float vel;
- //double lat;
- //double lon;
- float lat;
- float lon;
-
-
- // Request type
+ // Structure Define
  PACKET stPacket;
 
  PACKET *ptr_metadata = (PACKET *) &(stPacket);
 
+ // Vairables define
  int i;
  char *serverIP;
  char *serverIP_nxp;
@@ -505,13 +480,9 @@ int main(int argc, char *argv[])
 #endif
 
 #if 1
- //-------------------VDS -> CM_SERVER-----------------------//
+ //------------------- VDS -> CM_SERVER --------------------------//
 
- char *appname = argv[0];
-
-  // For add the logo to main Frame to display
-
-printf("VDS_Init\n");
+ printf("VDS_Init\n");
  fflush(stdout);
  VDS_Init();
 
@@ -523,18 +494,17 @@ printf("VDS_Init\n");
 
    if(strcmp(*argv, "-v") == 0) {
      VDScfg.Verbose = 1;
-
    }
  }
 
  // handle Ctrl-C
-if(signal(SIGINT, termination_handler) == SIG_IGN) 
+ if(signal(SIGINT, termination_handler) == SIG_IGN) 
 	signal(SIGINT, SIG_IGN);
 
  printf("connecting ... \n");
  fflush(stdout);
    
- /* Connect to VDS Server */
+ // Connect to VDS Server 
  if((i = VDS_Connect(&cliNet)) != 0) {
    fprintf(stderr, "Can't initialise vds client (returns %d, %s)\n", i, i == -4 ? "No server": strerror(errno));
  }
@@ -542,133 +512,143 @@ if(signal(SIGINT, termination_handler) == SIG_IGN)
 #endif 
 
 #if 1
-  //-------------------APO -> CM_SERVER-----------------------//
+  //------------------- APO -> CM_SERVER -----------------------//
 
-  printf("\nApocQueryServers\n");
-  ApocQueryServers(200, NULL);
+ const int channel = 1;
+ tApoSid sid = NULL;//NULL;
+ tApoSubscription subs[6];// Hier steht die Anzahl der aktuellen Abonnements!
 
-  while (!ApocQueryDone())
-  {
-    if (ApocWaitIO(100) == 1)
-    {
-      ApocPoll();
-    }
-  }
+ printf(" APOCInit\n");
+ ApocInit();
 
-  printf(" ApocGetServerCount: %d\n", ApocGetServerCount());
-  for (int i = 0; i < ApocGetServerCount(); i++)
-  {
-    const tApoServerInfo *sinf = ApocGetServer(i);
-    if (strcmp(sinf->Identity, "CarMaker 8.0.2 - Car_Generic") == 0)
-    {
-      sid = ApocOpenServer(i);
-      break;
-    }
-  }
+ printf("\nApocQueryServers\n");
+ ApocQueryServers(200, NULL);
 
-  if (sid == NULL)
-  {
-    exit(1);
-  }
+ while (!ApocQueryDone())
+ {
+   if (ApocWaitIO(100) == 1)
+   {
+     ApocPoll();
+   }
+ }
 
-  printf(" ApocConnect\n");
-  ApocConnect(sid, 1 << channel);
-  while (ApocGetStatus(sid, NULL) == ApoConnPending)
-  {
-    if (ApocWaitIO(100) == 1)
-    {
-      ApocPoll();
-    }
-  }
+ printf(" ApocGetServerCount: %d\n", ApocGetServerCount());
+ for (int i = 0; i < ApocGetServerCount(); i++)
+ {
+   const tApoServerInfo *sinf = ApocGetServer(i);
+   if (strcmp(sinf->Identity, "CarMaker 8.0.2 - Car_Generic") == 0)
+   {
+     sid = ApocOpenServer(i);
+     break;
+   }
+ }
 
-  if (!(ApocGetStatus(sid, NULL) & ApoConnUp))
+ if (sid == NULL)
+ {
+   exit(1);
+ }
 
-  {
-    exit(2);
-  }
+ printf(" ApocConnect\n");
+ ApocConnect(sid, 1 << channel);
+ while (ApocGetStatus(sid, NULL) == ApoConnPending)
+ {
+   if (ApocWaitIO(100) == 1)
+   {
+     ApocPoll();
+   }
+ }
+
+ if (!(ApocGetStatus(sid, NULL) & ApoConnUp))
+ {
+   exit(2);
+ }
 #endif
 
-  //-----------------------ABONNIEREN DER VARIABLEN------------------//
+ //----------------------- VARIABLES SUBSCRIBE ------------------//
+
+ // METADTA Vairables define
+ double time;
+ float lat;
+ float lon;
+ float vel;
+ float lane_width;
+ float devdist;
+ float CM_d2l;
 
 #if 1
-  subs[0].Name = "Time";
-  subs[1].Name = "Car.Road.GCS.Lat";
-  subs[2].Name = "Car.Road.GCS.Long";
-  subs[3].Name = "Car.vx";
-  subs[4].Name = "Car.Road.Lane.Act.Width";
-  subs[5].Name = "Car.Road.Path.DevDist";
+ // subscribe the Metadata
+ subs[0].Name = "Time";
+ subs[1].Name = "Car.Road.GCS.Lat";
+ subs[2].Name = "Car.Road.GCS.Long";
+ subs[3].Name = "Car.vx";
+ subs[4].Name = "Car.Road.Lane.Act.Width";
+ subs[5].Name = "Car.Road.Path.DevDist";
 
-  printf(" ApocSubscribe\n");
+ printf("ApocSubscribe Done.\n");
 
-  //ApocSubscribe(sid, 2, subs, 100, 1, 20, 0);
-  ApocSubscribe(sid, 6, subs, 100, 1, 25, 0);
-
- float width_lane;
- float devdist;
- float dist;
+ ApocSubscribe(sid, 6, subs, 100, 1, 25, 0);
 
 #endif
-  while (true)
-  {
+ while (true)
+ {
 
-    //sleep(10);
-    ApocPoll();
-    if (!(ApocGetStatus(sid, NULL) &ApoConnUp))
-    {
-      break;
-    }
+   ApocPoll();
 
-    if (ApocGetData(sid) > 0)
-    {
+   if (!(ApocGetStatus(sid, NULL) &ApoConnUp))
+   {
+     break;
+   }
 
-      time = (*(double*)subs[0].Ptr);
-      ptr_metadata->u4_timestampL = time;
+   if (ApocGetData(sid) > 0)
+   {
 
-      lat  = (*(double*)subs[1].Ptr * 180/M_PI);
-      //lat  = (*(double*)subs[1].Ptr);
-      ptr_metadata->u4_ins_latitude = lat;
+     // METADATA: double -> string conversion
+      
+     time = (*(double*)subs[0].Ptr);
+     ptr_metadata->u4_timestampL = time;
+
+     lat  = (*(double*)subs[1].Ptr * 180/M_PI);
+     ptr_metadata->u4_ins_latitude = lat;
           
-      lon  = (*(double*)subs[2].Ptr * 180/M_PI); 
-      //lon  = (*(double*)subs[2].Ptr); 
-      ptr_metadata->u4_ins_longitude = lon; 
+     lon  = (*(double*)subs[2].Ptr * 180/M_PI); 
+     ptr_metadata->u4_ins_longitude = lon; 
 
-      vel  = (*(float*)subs[3].Ptr * 3600) / 1000;
+     vel  = (*(float*)subs[3].Ptr * 3600) / 1000;
 
-      width_lane  = (*(float*)subs[4].Ptr); 
+     lane_width  = (*(float*)subs[4].Ptr); 
      
-      devdist  = (*(float*)subs[5].Ptr); 
+     devdist  = (*(float*)subs[5].Ptr); 
 
-      dist = (width_lane/2) + devdist - 0.811;
-      ptr_metadata->u4_ins_cm_d2l = dist; 
+     CM_d2l = (lane_width/2) + devdist - CAR_WIDTH_CR;
+     ptr_metadata->u4_ins_cm_d2l = CM_d2l; 
 
 
      printf("\nAPO OUTPUT: %f s\t%f\t%f\t%f km/h\n", time, lat, lon, vel);
-     printf("APO OUTPUT: %f \t%f\t%f\n", width_lane, devdist, dist) ;
+     printf("APO OUTPUT: %f \t%f\t%f\n", lane_width, devdist, CM_d2l) ;
 
 #if 1
-      int send_size = send(VDScfg.sock_nxp, (char *)ptr_metadata, sizeof(PACKET), 0);
-      if(send_size == -1){
-	      printf("\n***Error in sending request for Lane information: [%d] : %s, [%d]\n", errno, strerror(errno), send_size);
-              return -1;
-      }
+     //send the CM_METADAT to NXP_Server fro Frame processing
+     int send_size = send(VDScfg.sock_nxp, (char *)ptr_metadata, sizeof(PACKET), 0);
+     if(send_size == -1){
+	printf("\n***Error in sending request for Lane information: [%d] : %s, [%d]\n", errno, strerror(errno), send_size);
+        return -1;
+     }
 
-      printf("send Size: %d\n", send_size);
+     printf("send Size: %d\n", send_size);
      
-    /* Read from TCP/IP-Port and process the image */
-    if (VDS_RecvHdr(VDScfg.sock, VDScfg.sbuf) == 0) {
-
-	if(VDScfg.TerminationRequested)
-	break;
+     // Read from TCP/IP-Port and process the image 
+     if (VDS_RecvHdr(VDScfg.sock, VDScfg.sbuf) == 0) {
+	 
+        if(VDScfg.TerminationRequested)
+           break;
 
         VDS_GetData(&cliNet);
         fflush(stdout); 
-    }
+     } 
 #endif
-    }
+   }
+ }
 
-
-  }
-
-  return 0;
+ return 0;
 }
 
