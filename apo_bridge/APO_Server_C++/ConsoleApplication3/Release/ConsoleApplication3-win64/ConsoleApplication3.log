@@ -1,6 +1,6 @@
 ﻿  Creating app_tmp.c
   Apo.cpp
-c:\users\ll_stsekeid\desktop\cm_apo_app\apo_bridge\consoleapplication3\apo.cpp(144): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
+c:\users\ll_stsekeid\desktop\cm_apo_app\apo_bridge\apo_server_c++\consoleapplication3\apo.cpp(160): warning C4267: "Initialisierung": Konvertierung von "size_t" nach "int", Datenverlust möglich
 c:\zeromq\4.2.5\cppzmq\zmq.hpp(699): warning C4715: "zmq::socket_t::send": Nicht alle Codepfade geben einen Wert zurück.
-  ConsoleApplication3.vcxproj -> C:\Users\ll_stsekeid\Desktop\cm_apo_app\apo_bridge\ConsoleApplication3\./ConsoleApplication3.win64.exe
+  ConsoleApplication3.vcxproj -> C:\Users\ll_stsekeid\Desktop\cm_apo_app\apo_bridge\APO_Server_C++\ConsoleApplication3\./ConsoleApplication3.win64.exe
           1 Datei(en) kopiert.

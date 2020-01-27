@@ -40,19 +40,21 @@ int main()
 {
 	const int channel = 1;
 	tApoSid sid = nullptr;
-	tApoSubscription subs[2];						// Hier steht die Anzahl der aktuellen Abonnements!
+	tApoSubscription subs[3];						// Hier steht die Anzahl der aktuellen Abonnements!
 	ApocInit();
 	bool test = false;
 
 	context_t context(1);
 	socket_t socket(context, ZMQ_REP);
-	socket.bind("tcp://*:1234");					// Hier wird der Socket mit der Lokalen IP und dem Port 1234 verbunden
+	socket.bind("tcp://10.5.11.53:8888");					// Hier wird der Socket mit der Lokalen IP und dem Port 1234 verbunden
 
 	string latstring = "";
 	string lonstring = "";
+	string timestring = "";
 	string all = "";
 	double lat = 0.0;
 	double lon = 0.0;
+	double time = 0.0;
 
 	//-------------------SERVER VERBINDUNGSAUFBAU-----------------------//
 
@@ -108,15 +110,25 @@ int main()
 
 	subs[0].Name = "Car.Road.GCS.Lat";
 	subs[1].Name = "Car.Road.GCS.Long";
+	subs[2].Name = "Time";
 
-	ApocSubscribe(sid, 2, subs, 100, 1, 2, 0); //ApocSubscribe Variablen: (Aktuelle Serverid, Anzahl Abonnierter Variablen, Name des Speicherarrays, Clientbacklog, Serverbacklog, Sendefrequenz, "UseAppTime")
 
-	cout << "Connecting to hello world server" << endl;
+
+
+
+	ApocSubscribe(sid, 3, subs, 100, 1, 100, 0); //ApocSubscribe Variablen: (Aktuelle Serverid, Anzahl Abonnierter Variablen, Name des Speicherarrays, Clientbacklog, Serverbacklog, Sendefrequenz, "UseAppTime")
+
+	cout << "C++ APO Server" << endl;
+
+	//cout << subs << endl;
+
 
 	while (true)
 	{
 		sleep(10);
 		ApocPoll();
+
+
 		if (!(ApocGetStatus(sid, nullptr) &ApoConnUp))
 		{
 			break;
@@ -126,31 +138,46 @@ int main()
 		{
 			message_t request;						//Zuerst wird eine Request-Message erstellt, in der die vom Client gesendete Anfrage gespeichert wird
 			socket.recv(&request);
-			cout << "Received" << endl;
 
-			lat = ((*(double*)subs[0].Ptr * 180/M_PI) );			//Hier wird die Variable zu einem double gecasted und in die Variable "lat" gespeichert
+			cout << "Received request from Python Client" << endl;
 
-			cout.precision(10);
-			cout << lat << endl;
-
+			lat = ((*(double*)subs[0].Ptr * 180 / M_PI)); //Hier wird die Variable zu einem double gecasted und in die Variable "lat" gespeichert
 			latstring = double_to_string(lat);								//Die Variable wird in dem String "latstring" gespeichert, um ihn per TCP versendet zu können
+			//cout << latstring << endl;
 
-			lon = ((*(double*)subs[1].Ptr * 180/M_PI));			//Hier wird die Variable zu einem double gecasted und in die Variable "lon" gespeichert
-
+			lon = ((*(double*)subs[1].Ptr * 180 / M_PI));			//Hier wird die Variable zu einem double gecasted und in die Variable "lon" gespeichert
 			lonstring = double_to_string(lon);							//Die Variable wird in dem String "lonstring" gespeichert, um ihn per TCP versendet zu können
+			//cout << lonstring << endl;
 
-			all = latstring + lonstring;
+			time = ((*(double*)subs[2].Ptr));
+			timestring = double_to_string(time);
 
-			int length = latstring.length() + lonstring.length();					//Da für das Versenden die Angabe der Stringlänge notwendig ist, wird in einer eigenen Variable die Stringlänge gespeichert
+
+			all = latstring + ";" + lonstring + "," + timestring;
+			cout << all << endl;
+			//int length = latstring.length() + lonstring.length();					//Da für das Versenden die Angabe der Stringlänge notwendig ist, wird in einer eigenen Variable die Stringlänge gespeichert
+			
+			int length1 = all.length();
+			
+			
+			//message_t reply(length);
+			
+			message_t reply1(length1);
+			//message_t reply2(length2);
+
+			//memcpy((void *)reply.data(), all.c_str(), length);
+
+			memcpy((void *)reply1.data(), all.c_str(), length1);
+			//memcpy((void *)reply2.data(), all.c_str(), length2);
+	
+			//cout << "Sending" << reply << endl;
+
+			cout << "Sending" << reply1 << endl;
+
+			//socket.send(reply);
 		
-
-			message_t reply(length);	
-
-			memcpy((void *)reply.data(), all.c_str(), length);
-
-			cout << "Sending" << reply << endl;
-			socket.send(reply);
-
+			socket.send(reply1);
+			//socket.send(reply2);
 
 		}
 	}

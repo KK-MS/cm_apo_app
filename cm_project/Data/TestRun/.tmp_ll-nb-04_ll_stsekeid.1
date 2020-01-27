@@ -2,7 +2,7 @@
 FileIdent = CarMaker-TestRun 8
 FileCreator = CarMaker 8.0.2 2019-8-30
 Description:
-Vehicle = Examples/DemoCar
+Vehicle = .tmp_ll-nb-04_ll_stsekeid.1
 Trailer =
 Tire.0 =
 Tire.1 =
@@ -78,9 +78,74 @@ ErrorClass.10.WarningLimit = 3 5
 ErrorClass.11.Action = abort
 ErrorClass.11.Save = 0
 ErrorClass.11.WarningLimit = 3 5
-Road.FName = .tmp_ll-nb-04_ll_stsekeid.1
+Road.FileIdent = IPGRoad 8.0
+Road.LibVersion = 8.0.2
+Road.Country = DEU
+Road.nLinks = 1
+Road.nJunctions = 0
+Road.nObjects = 50
+Road.nRoutes = 2
+Road.RoadNetworkLength = 1000
+Road.BBox = -10 1010 -13.5 13.5 -11 11
+Road.Route.0.Length = 1000
+Road.Route.1.Length = 1000
+Road.RST.Unit = kmh
+Road.RST = 50 100 130 30 70 30 0 -1
+Road.Movie = 0.2 1 0.02 1.5 1.5 1 1
+Road.PathMode = -1
+Road.Link.0.ID = 0
+Road.Link.0.Junctions = -1 -1 -2 -1
+Road.Link.0.Node0 = 0 0 0 0
+Road.Link.0.RST = undefined
+Road.Link.0.RL.ID = 1
+Road.Link.0.Seg.0.ID = 10
+Road.Link.0.Seg.0.Type = Straight
+Road.Link.0.Seg.0.Param = 1000 0 0 0 0 0 0 0
+Road.Link.0.LaneSection.0.ID = 5
+Road.Link.0.LaneSection.0.Start = 0
+Road.Link.0.LaneSection.0.LaneL.0.ID = 6
+Road.Link.0.LaneSection.0.LaneL.0 = 0 3 3 0 0 0 0
+Road.Link.0.LaneSection.0.LaneL.0.ARP = 19 20 21 22 23 24
+Road.Link.0.LaneSection.0.LaneL.0.Width:
+	11 -1 0 0 0 3 0 -999 -999
+Road.Link.0.LaneSection.0.LaneL.1.ID = 8
+Road.Link.0.LaneSection.0.LaneL.1 = 2 0.5 0.5 5 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0.ID = 7
+Road.Link.0.LaneSection.0.LaneR.0 = 0 3 3 0 0 0 0
+Road.Link.0.LaneSection.0.LaneR.0.ARP = 25 26 27 28 29 30
+Road.Link.0.LaneSection.0.LaneR.0.Width:
+	15 -1 0 0 0 3 0 -999 -999
+Road.Link.0.LaneSection.0.LaneR.1.ID = 9
+Road.Link.0.LaneSection.0.LaneR.1 = 2 0.5 0.5 5 0 0 0
+Road.LanePath.0 = 36 6 2 10 0.1 0.1
+Road.LanePath.1 = 37 7 2 10 0.1 0.1
+Road.UserPath.0 = 39 0 1 -2 -2 1
+Road.UserPath.0.Nodes:
+	40 0 0 2 0 0
+	41 0 0 3 0 0
+Road.UserPath.1 = 45 0 1 -2 -2 -1
+Road.UserPath.1.Nodes:
+	47 0 0 2 0 0
+	46 0 0 3 0 0
+Route.0.ID = 34
+Route.0.Name = Route
+Route.0.DrvPath.ID = 38
+Route.0.DrvPath:
+	39
+Route.1.ID = 35
+Route.1.Name = ReverseRoute
+Route.1.DrvPath.ID = 44
+Route.1.DrvPath:
+	45
+Road.RL.1.RoadMarking.0.ID = 31 1
+Road.RL.1.RoadMarking.0 = 0 0 0 1 0 0 0.12 0 2 0 0 3 6 1 1 4 ""
+Road.RL.1.RoadMarking.1.ID = 32 1
+Road.RL.1.RoadMarking.1 = 0 0 0 1 0.1 -1 0.12 0 1 0 0 0 0 1 1 4 ""
+Road.RL.1.RoadMarking.2.ID = 33 1
+Road.RL.1.RoadMarking.2 = 0 0 0 1 -0.1 1 0.12 0 1 0 0 0 0 1 1 4 ""
+Road.MaxUsedObjId = 47
 Road.VhclStartPos = 0 0 0
-Road.VhclRoute = B308_W
+Road.VhclRoute = Route
 Road.RouteId = 0
 Env.StartTime.Year = 2019
 Env.StartTime.Month = 1

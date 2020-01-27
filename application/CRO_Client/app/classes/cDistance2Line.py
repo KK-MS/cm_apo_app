@@ -13,8 +13,8 @@ __email___ = "sebastian.keidler@hs-kempten.de"
 __status__ = "Develop"
 
 #%%
-from shapely.geometry import Polygon, Point, MultiPolygon
-import shapefile
+#from shapely.geometry import Polygon, Point, MultiPolygon
+#import shapefile
 import os,sys,inspect
 import time
 from tqdm import tqdm

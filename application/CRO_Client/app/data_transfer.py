@@ -13,30 +13,8 @@ import classes.cSegmentAnalyzer as sa
 import classes.cDistance2Line as d2l
 
 
-def calcD2l(lat,lon):
+def calcD2l(lat,lon,afRoadNN,dfRoadL1):
     
-    oCROLayer0 = l0.cCROLayer0()
-    oSegment = sa.cSegmentAnalyzer()
-    oDistance2Line = d2l.cDistance2Line()
-    
-    
-    sRoadName = 'A7'
-    sRoadDirection = 'S'
-    sLayer = '0'
-    sResolution = '1'
-    cRefLine = 'P0'
-    
-    
-    df = oCROLayer0.importRoadData(oCROLayer0.sGrandParentDir,sRoadName,sRoadDirection,sLayer,sResolution)
-    # Import Road data Layer 1
-    dfRoadL1 = oSegment.importRoadData(oSegment.sGrandParentDir,sRoadName,sRoadDirection,str(1),sResolution)
-    
-    
-    
-    #create numpy array for Nearest Neigbour search
-    afRoadNN = oSegment.createNNRoadArray(df,'Line'+str(cRefLine)+'_lat','Line'+str(cRefLine)+'_lon')
-    
-
     afVehicleNN = [float(lat),float(lon)]
     #print(afVehicleNN)
     
@@ -46,11 +24,10 @@ def calcD2l(lat,lon):
     # Calculate Nearest Road to Vehicle indexes
     index = np.argmin(np.linalg.norm(afRoadNN-afVehicleNN,axis=1))
     
-    
     fLat1 = afRoadNN[index][0]
     fLon1 = afRoadNN[index][1]
     
-    
+    oDistance2Line = d2l.cDistance2Line()
     #calculate vector vehicle to road
     fVector = oDistance2Line.calcVectorDistanceAngle(fLat0,fLon0,fLat1,fLon1)
     

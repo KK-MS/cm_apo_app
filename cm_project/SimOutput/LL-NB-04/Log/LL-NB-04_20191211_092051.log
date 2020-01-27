@@ -10,3 +10,19 @@ SIMULATE	cm_apo_test
 
 TIME	43.937
 SIM_END		cm_apo_test	43.934s	995.72m
+TIME	919.777
+SIM_START	cm_apo_test	2019-12-11 11:47:40
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	33.377
+SIM_END		cm_apo_test	33.374s	702.392m
+SIM_START	cm_apo_test	2019-12-11 11:48:16
+TIME	0.000
+SIMULATE	cm_apo_test
+
+TIME	29.393
+SIM_END		cm_apo_test	29.39s	591.711m
+TIME	46.063
+SHUTDOWN	CarMaker quick shutdown initiated
+
