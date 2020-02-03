@@ -114,7 +114,6 @@ static int VDS_RecvHdr(int sock, char *hdr)
   }
 }
 
-
 /*
  ** VDS_Connect
  **
@@ -454,6 +453,8 @@ int main(int argc, char *argv[])
  // Structure Define
  PACKET stPacket;
 
+ netrx cliNet; // TODO use malloc to create netrx object.
+
  PACKET *ptr_metadata = (PACKET *) &(stPacket);
 
  // Vairables define
@@ -461,8 +462,10 @@ int main(int argc, char *argv[])
  char *serverIP;
  char *serverIP_nxp;
  int port;
+ char info[] = "APO";
 
- netrx cliNet; // TODO use malloc to create netrx object.
+ //strcpy(cliNet.ptr_send_buf, info);
+ //cliNet.size_send_buf = sizeof(info);
 
  serverIP                      = argv[1];
  serverIP_nxp                  = argv[2];
@@ -476,6 +479,71 @@ int main(int argc, char *argv[])
   /* Connect to NXP Server*/
  if((i = VDS_Connect_nxp(&cliNet)) != 0) {
    fprintf(stderr, "Can't initialise vds client (returns %d, %s)\n", i, i == -4 ? "No server": strerror(errno));
+ }
+#if 1
+
+ //send the CM_METADAT to NXP_Server fro Frame processing
+ int send_size = send(VDScfg.sock_nxp, info, sizeof(info) , 0);
+ //int send_size = send(VDScfg.sock_nxp, cliNet.ptr_send_buf , cliNet.size_send_buf, 0);
+ if(send_size == -1){
+    printf("\n***Error in sending request for Lane information: [%d] : %s, [%d]\n", errno, strerror(errno), send_size);
+    return -1;
+  }
+
+  printf("send Size: %d\n", send_size);
+#endif
+#endif
+
+#if 1
+  //------------------- APO -> CM_SERVER -----------------------//
+
+ const int channel = 1;
+ tApoSid sid = NULL;//NULL;
+ tApoSubscription subs[6];// Hier steht die Anzahl der aktuellen Abonnements!
+
+ printf(" APOCInit\n");
+ ApocInit();
+
+ printf("\nApocQueryServers\n");
+ ApocQueryServers(2000, NULL);
+
+ while (!ApocQueryDone())
+ {
+   if (ApocWaitIO(100) == 1)
+   {
+     ApocPoll();
+   }
+ }
+
+ printf(" ApocGetServerCount: %d\n", ApocGetServerCount());
+ for (int i = 0; i < ApocGetServerCount(); i++)
+ {
+   const tApoServerInfo *sinf = ApocGetServer(i);
+   if (strcmp(sinf->Identity, "CarMaker 8.0.2 - Car_Generic") == 0)
+   {
+     sid = ApocOpenServer(i);
+     break;
+   }
+ }
+
+ if (sid == NULL)
+ {
+   exit(1);
+ }
+
+ printf(" ApocConnect\n");
+ ApocConnect(sid, 1 << channel);
+ while (ApocGetStatus(sid, NULL) == ApoConnPending)
+ {
+   if (ApocWaitIO(500) == 1)
+   {
+     ApocPoll();
+   }
+ }
+
+ if (!(ApocGetStatus(sid, NULL) & ApoConnUp))
+ {
+   exit(2);
  }
 #endif
 
@@ -507,62 +575,12 @@ int main(int argc, char *argv[])
  // Connect to VDS Server 
  if((i = VDS_Connect(&cliNet)) != 0) {
    fprintf(stderr, "Can't initialise vds client (returns %d, %s)\n", i, i == -4 ? "No server": strerror(errno));
+ fflush(stdout);
  }
 
+  printf("VDS Connect done\n");
+ fflush(stdout);
 #endif 
-
-#if 1
-  //------------------- APO -> CM_SERVER -----------------------//
-
- const int channel = 1;
- tApoSid sid = NULL;//NULL;
- tApoSubscription subs[6];// Hier steht die Anzahl der aktuellen Abonnements!
-
- printf(" APOCInit\n");
- ApocInit();
-
- printf("\nApocQueryServers\n");
- ApocQueryServers(200, NULL);
-
- while (!ApocQueryDone())
- {
-   if (ApocWaitIO(100) == 1)
-   {
-     ApocPoll();
-   }
- }
-
- printf(" ApocGetServerCount: %d\n", ApocGetServerCount());
- for (int i = 0; i < ApocGetServerCount(); i++)
- {
-   const tApoServerInfo *sinf = ApocGetServer(i);
-   if (strcmp(sinf->Identity, "CarMaker 8.0.2 - Car_Generic") == 0)
-   {
-     sid = ApocOpenServer(i);
-     break;
-   }
- }
-
- if (sid == NULL)
- {
-   exit(1);
- }
-
- printf(" ApocConnect\n");
- ApocConnect(sid, 1 << channel);
- while (ApocGetStatus(sid, NULL) == ApoConnPending)
- {
-   if (ApocWaitIO(100) == 1)
-   {
-     ApocPoll();
-   }
- }
-
- if (!(ApocGetStatus(sid, NULL) & ApoConnUp))
- {
-   exit(2);
- }
-#endif
 
  //----------------------- VARIABLES SUBSCRIBE ------------------//
 
@@ -585,13 +603,17 @@ int main(int argc, char *argv[])
  subs[5].Name = "Car.Road.Path.DevDist";
 
  printf("ApocSubscribe Done.\n");
+ fflush(stdout);
 
- ApocSubscribe(sid, 6, subs, 100, 1, 25, 0);
+ ApocSubscribe(sid, 6, subs, 100, 1, 10, 0);
 
 #endif
  while (true)
  {
+ //printf("APO LOOP .\n");
+ fflush(stdout);
 
+   usleep(100);
    ApocPoll();
 
    if (!(ApocGetStatus(sid, NULL) &ApoConnUp))
@@ -625,6 +647,7 @@ int main(int argc, char *argv[])
 
      printf("\nAPO OUTPUT: %f s\t%f\t%f\t%f km/h\n", time, lat, lon, vel);
      printf("APO OUTPUT: %f \t%f\t%f\n", lane_width, devdist, CM_d2l) ;
+ fflush(stdout);
 
 #if 1
      //send the CM_METADAT to NXP_Server fro Frame processing
@@ -635,6 +658,7 @@ int main(int argc, char *argv[])
      }
 
      printf("send Size: %d\n", send_size);
+ fflush(stdout);
      
      // Read from TCP/IP-Port and process the image 
      if (VDS_RecvHdr(VDScfg.sock, VDScfg.sbuf) == 0) {
